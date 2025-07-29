@@ -41,7 +41,7 @@
                     <!-- Font size input -->
                     <div class="text-input col-2">
                         <input class="form-control main-input" type="number" id="fontSizeInput" name="fsize"
-                            placeholder="font size" min="10" max="200" value="60">
+                            placeholder="{font size}" min="10" max="200" value="60">
                     </div>
                 </div>
             </div>
@@ -52,9 +52,13 @@
 
         <main>
 
-
+           
             <!-- Preview Area -->
             {% for i in range(6) %}
+                <div id="preview" class="container-fluid text-center">
+                            <h2 style="font-size: {{ size ~ 'px' }};">size: {{ size }} => {{ text }}</h2>
+                </div>
+                
                 {% for item in sizes_list %}
                     <div id="preview" class="container-fluid text-center">
                         <h2 style="font-size: {{ item ~ 'px' }};">size: {{ item }} => {{ text }}</h2>

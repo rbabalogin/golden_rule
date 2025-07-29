@@ -17,7 +17,7 @@ def index():
 
     sizes_list: list[float] = compute_golden_rule(size)
     
-    return render_template("index.html", text=text, sizes_list=sizes_list, font_name=font_name)
+    return render_template("index.html", text=text, sizes_list=sizes_list, font_name=font_name, size=int(size))
 
 
 if __name__ == '__main__':
